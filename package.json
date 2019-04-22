@@ -1,11 +1,11 @@
 {
-  "name": "hello-world",
+  "name": "Plant'IO",
   "version": "1.0.0",
-  "description": "Hello world app test for electron",
+  "description": "This is the control app for the 'PlantIO' object",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
   },
   "author": "EloxFire",
-  "license": "ISC"
+  "license": ""
 }
