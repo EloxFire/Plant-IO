@@ -1,6 +1,7 @@
 # **IOT Project - Plant'IO - Ynov Info B1A**
 
 ###### Projet mené par Corentin MACE et Enzo AVAGLIANO
+###### **Lien Github : https://github.com/EloxFire/IOT-Project.git**
 ---
 
 
@@ -28,7 +29,7 @@
     - La luminosité optimale
     - La période de floraison
 
-  - Plant'IO possèdes plusieur outils pour accomplir son devoir :
+  - Plant'IO possèdes plusieurs outils pour accomplir son devoir :
     - Capteurs d'humidité
     - Capteur de luminosité
     - Capteur de température atmosphérique
