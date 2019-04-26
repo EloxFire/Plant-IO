@@ -1,4 +1,4 @@
-# **IOT Project -Plant'IO - Ynov Info B1A**
+# **IOT Project - Plant'IO - Ynov Info B1A**
 
 ###### Projet mené par Corentin MACE et Enzo AVAGLIANO
 ---
