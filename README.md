@@ -4,7 +4,7 @@
 ---
 
 
-![Plant'IO Logo](https://cdn.discordapp.com/attachments/531527773680959509/571344311115841536/200x200.png)
+![Plant'IO Logo](https://cdn.discordapp.com/attachments/531527773680959509/571345410157969430/800x200github_page.png)
 
 ## **LE PROJET :**
 
