@@ -4,7 +4,7 @@
 ---
 
 
-![LogoPlantIONoBG.png](https://cdn.discordapp.com/attachments/531527773680959509/571341665659518986/LogoPlantIONoBG.png)
+![Plant'IO Logo](https://cdn.discordapp.com/attachments/531527773680959509/571344311115841536/200x200.png)
 
 ## **LE PROJET :**
 
@@ -40,4 +40,8 @@
 
   ---
 
-  # **#To complete**
+## **Première utilisation :**
+#to complete
+
+## **Maintenance & entretien :**
+#to complete
