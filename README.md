@@ -15,7 +15,7 @@
 
 
 #### - Les fonctionnalités ?
-  - Une base de donnée est fournie à l'utilisateur pour qu'il puisse choisir quelle plante il possède, afin que PLant'IO s'adapte en fonction.
+  - Une base de donnée est fournie à l'utilisateur pour qu'il puisse choisir quelle plante il possède, afin que Plant'IO s'adapte en fonction.
 
   - La base de donnée est extensible; c'est-à-dire que l'utilisateur peut lui-même rajouter des plantes s'il trouve que la base de données est incomplète ou qu'il ne trouve pas la plante qu'il possède.
 
