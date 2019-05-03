@@ -1,6 +1,6 @@
 # **IOT Project - Plant'IO - Ynov Info B1A**
 
-###### Projet mené par Corentin MACE et Enzo AVAGLIANO
+###### Projet mené par [Corentin MACE](https://github.com/corentinmace) et [Enzo AVAGLIANO](https://github.com/EloxFire)
 ###### **Lien Github : https://github.com/EloxFire/IOT-Project.git**
 ---
 
