@@ -6,10 +6,14 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({
       titleBarStyle: 'show',
       icon: 'assets/img/icon.png',
-      frame: true,
+      frame: false,
       width: 1280,
       height: 720,
-      show: false // don't show the main window
+      show: false, // don't show the main window
+      resizable: false,
+      webPreferences: {
+          nodeIntegration: true
+      }
   });
   // create a new `splash`-Window
   splash = new BrowserWindow({width: 1280, height: 720, icon:"assets/img/icon.png", transparent: false, frame: false, alwaysOnTop: true});
