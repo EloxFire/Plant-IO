@@ -1,0 +1,46 @@
+
+
+.logo{
+  position: absolute;
+  margin-left: 1em;
+  margin-top: 1em;
+  float: left;
+  max-width: 15.625em;
+  max-height: 15.625em;
+}
+.title{
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  transform: translate(-50%, -50%);
+}
+
+.verticalSeparator{
+  width: 2px;
+  border-radius: 2px;
+  background-color: #000;
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+#container{
+  display: flex;
+}
+#currentsStats{
+  width: 50%;
+  height: auto;
+  /* background-color: rgb(206, 12, 208); */
+}
+#otherStats{
+  width: 50%;
+  height: auto;
+  /* background-color: rgb(181, 8, 17); */
+}
+
+.stats{
+  display: flex;
+  justify-content: center;
+}

@@ -2,16 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Plant'IO - Control application</title>
   </head>
   <body>
-    <main>
       <header>
+          <div class="option" id="close"><img src="assets/img/bar/close.png" alt=""></div>
+          <div class="option"  id="mini"><img src="assets/img/bar/minimize.png"></div>
+      </header>
+      <main>
         <img class="logo" src="assets/img/logo.png" alt="Plant'IO logo">
         <h1 class="title">Welcome %user%</h1>
-      </header>
-
       <section id="container">
         <div id="currentsStats">
           <h1>Current stats :</h1>
@@ -35,7 +37,7 @@
         </div>
       </section>
     </main>
-
+    <script src="assets/js/remote.js"></script>
     <script src="assets/js/easypiechart.js"></script>
     <script src="assets/js/initeasychart.js"></script>
   </body>

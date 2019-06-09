@@ -4,8 +4,13 @@
   "description": "This is the control app for the 'PlantIO' object",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . Plant'IO"
   },
   "author": "EloxFire",
-  "license": ""
+  "license": "",
+  "dependencies": {
+    "electron": "^5.0.3",
+    "electron-packager": "^13.1.1"
+  }
 }
