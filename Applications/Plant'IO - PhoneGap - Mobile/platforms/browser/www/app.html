@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Plant'IO - Control application</title>
+  </head>
+  <body>
+      <header>
+        <div class="bar-left">
+          <div class="option" id="text_logo"><img src="assets/img/textOnly.png"></div>
+        </div>
+            <div class="bar-right">
+              <div class="option" id="close"><img src="assets/img/bar/close.png" alt=""></div>
+              <div class="option"  id="mini"><img src="assets/img/bar/minimize.png"></div>
+            </div>
+      </header>
+      <main>
+        <div id="header">
+            <img class="logo" src="assets/img/appLogo.png" alt="Logo de Plant'IO">
+            <h1 class="title">Welcome Back</h1>
+        </div>
+        <!-- <div id="main-container">
+            <h1>Current stats :</h1>
+
+            <div class="stats">
+              <div class="soil">
+                <h2>Soil humidity :</h2>
+                <div class="chart1" data-percent="75">75%</div>
+              </div>
+
+              <div class="air">
+                <h2>Air humidity :</h2>
+                <div class="chart2" data-percent="32">32%</div>
+              </div>
+            </div>
+        </div> -->
+      </main>
+       <!-- <input type="button" id="action-btn" value="Retrieve 10 first rows in the database" />
+       <table id="table" border="1">
+           <tbody>
+
+           </tbody>
+       </table>
+
+   <script>
+       var mysql = require('mysql');
+
+       function el(selector) {
+           return document.getElementById(selector);
+       }
+
+       el('action-btn').addEventListener('click', function(){
+           // Get the mysql service
+           getFirstTenRows(function(rows){
+               var html = '';
+
+               rows.forEach(function(row){
+                   html += '</td>';
+                   html += '<td>';
+                   html += row.nom;
+                   html += '</td>';
+                   html += '</tr>';
+                   html += row.categorie;
+                   html += '</td>';
+                   html += '</tr>';
+                   console.log(row);
+               });
+
+               document.querySelector('#table > tbody').innerHTML = html;
+           });
+       },false);
+
+       function getFirstTenRows(callback){
+           var mysql = require('mysql');
+
+           // Add the credentials to access your database
+           var connection = mysql.createConnection({
+               host     : 'localhost',
+               user     : 'root',
+               password : null,
+               database : 'plantio_db'
+           });
+
+           // connect to mysql
+           connection.connect(function(err) {
+               // in case of error
+               if(err){
+                   console.log(err.code);
+                   console.log(err.fatal);
+               }
+           });
+
+           // Perform a query
+           $query = 'SELECT `id`,`nom`, `categorie` FROM `infos_plantes` ORDER BY categorie LIMIT 10';
+
+           connection.query($query, function(err, rows, fields) {
+               if(err){
+                   console.log("An error ocurred performing the query.");
+                   console.log(err);
+                   return;
+               }
+
+               callback(rows);
+
+               console.log("Query succesfully executed");
+           });
+
+           // Close the connection
+           connection.end(function(){
+               // The connection has been closed
+           });
+       }
+   </script> -->
+    <script src="assets/js/remote.js"></script>
+    <script src="assets/js/easypiechart.js"></script>
+    <script src="assets/js/initeasychart.js"></script>
+  </body>
+</html>

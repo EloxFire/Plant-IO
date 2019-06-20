@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'ubuntu';
+  src: url("../fonts/ubuntu.ttf");
+}
+::-webkit-scrollbar {
+    width:0px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: ubuntu;
+}
+body {
+ background: rgb(224, 224, 224);
+ /* max-height: 100vw; */
+ background-image: url("../img/background.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ position: sticky;
+ height: 100vh;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+  margin-top: 4%;
+}
+.option {
+  margin: 5px;
+}
+
+.option img {
+  max-width: 20px;
+  max-height: 20px;
+  -webkit-app-region: no-drag;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #000;
+  -webkit-app-region: drag;
+  position: sticky;
+  top: 0;
+
+}
+.bar-left {
+  align-self: center;
+}
+.bar-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#close {
+  filter: invert(30%) sepia(87%) saturate(7410%) hue-rotate(355deg) brightness(103%) contrast(124%);
+
+}
+#close:hover {
+   filter: invert(30%) sepia(87%) saturate(7410%) hue-rotate(355deg) brightness(103%) contrast(124%);
+  opacity: 0.5;
+}
+#mini {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(188deg) brightness(106%) contrast(101%);
+}
+#mini:hover {
+  opacity: 0.5;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(188deg) brightness(106%) contrast(101%);
+}
+#text_logo img {
+  align-self: flex-end;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(188deg) brightness(106%) contrast(101%);
+
+  max-width: 70px;
+}
+
+
+.logo{
+  max-width: 90px;
+  max-height: 90px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  padding: 0;
+
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+
+#main-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#main-container-left {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-container-right {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 65vh;
+  margin-right: 100px;
+
+}
+.stats {
+  display: flex;
+  flex-direction: column;
+align-items: flex-end;
+}
+
+.button-more button {
+  background-color: #80B64F;
+  border-radius: 30px;
+  height: 30px;
+  width: 120%;
+  border: none;
+  margin: 2px;
+  margin-right: 1%;
+  font-family: 'ubuntu';
+  transition: background-color ease 1s;
+  text-transform: uppercase;
+}
+
+.button-more button:hover {
+  background-color: #508024;
+  transition: background-color ease 1s;
+}
