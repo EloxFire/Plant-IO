@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="assets/img/logo.png">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>Plant'IO - Control application</title>
@@ -17,8 +18,6 @@
             </div>
       </header>
       <main>
-        <!-- <img class="topleft" src="assets/img/TopLeft.png" alt="">
-        <img class="downright" src="assets/img/DownRight.png" alt=""> -->
         <div id="header">
             <img class="logo" src="assets/img/appLogo.png" alt="Logo de Plant'IO">
             <h1 class="title">Welcome Back</h1>
@@ -30,16 +29,34 @@
               <div class="stats">
                 <div class="soil">
                   <h2>Soil humidity :</h2>
-                  <div class="chart1" data-percent="75">75%</div>
+                  <div class="chart" data-percent="0"><div id="chart"></div></div>
                 </div>
 
                 <div class="air">
                   <h2>Air humidity :</h2>
-                  <div class="chart2" data-percent="32">32%</div>
+                  <div class="chart1" data-percent="0">
+                    <div id="chart1">
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="temp">
+                  <h2>Air Temperature :</h2>
+                  <div class="chart2" data-percent="0"><div id="chart2"></div></div>
                 </div>
               </div>
           </div>
           <div id="main-container-right">
+
+
+                  <input type="button" id="action-btn" value="Retrieve 10 first rows in the database" />
+                   <table id="table" border="1">
+                       <tbody>
+
+                       </tbody>
+                   </table>
+
             <div class="button-more">
               <button type="button" name="button">Choose Plant > </button>
               <button type="button" name="button">Advanced Stats > </button>
@@ -49,84 +66,48 @@
           </div>
         </div>
       </main>
-      <!-- <input type="button" id="action-btn" value="Retrieve 10 first rows in the database" />
-       <table id="table" border="1">
-           <tbody>
-
-           </tbody>
-       </table>
-
+      <div id="api-response">
+      </div>
    <script>
        var mysql = require('mysql');
 
-       function el(selector) {
-           return document.getElementById(selector);
-       }
+       var mySqlClient = mysql.createConnection({
+     host     : "localhost",
+     user     : "root",
+     password : null,
+     database : "plantio_db"
+   });
 
-       el('action-btn').addEventListener('click', function(){
-           // Get the mysql service
-           getFirstTenRows(function(rows){
-               var html = '';
+   var selectQuery = 'SELECT nom, categorie FROM infos_plantes ORDER BY categorie';
 
-               rows.forEach(function(row){
-                   html += '</td>';
-                   html += '<td>';
-                   html += row.nom;
-                   html += '</td>';
-                   html += '</tr>';
-                   html += row.categorie;
-                   html += '</td>';
-                   html += '</tr>';
-                   console.log(row);
-               });
+ mySqlClient.query(
+   selectQuery,
+   function select(error, results, fields) {
+     if (error) {
+       console.log(error);
+       mySqlClient.end();
+       return;
+     }
 
-               document.querySelector('#table > tbody').innerHTML = html;
-           });
-       },false);
+     if ( results.length > 0 )  {
+       var firstResult = results[ 0 ];
+       console.log('nom: ' + firstResult['nom']);
+       console.log('categorie: ' + firstResult['categorie']);
 
-       function getFirstTenRows(callback){
-           var mysql = require('mysql');
+     } else {
+       console.log("Pas de données");
+     }
+     mySqlClient.end();
+   }
+ );
 
-           // Add the credentials to access your database
-           var connection = mysql.createConnection({
-               host     : 'localhost',
-               user     : 'root',
-               password : null,
-               database : 'plantio_db'
-           });
 
-           // connect to mysql
-           connection.connect(function(err) {
-               // in case of error
-               if(err){
-                   console.log(err.code);
-                   console.log(err.fatal);
-               }
-           });
-
-           // Perform a query
-           $query = 'SELECT `id`,`nom`, `categorie` FROM `infos_plantes` ORDER BY categorie LIMIT 10';
-
-           connection.query($query, function(err, rows, fields) {
-               if(err){
-                   console.log("An error ocurred performing the query.");
-                   console.log(err);
-                   return;
-               }
-
-               callback(rows);
-
-               console.log("Query succesfully executed");
-           });
-
-           // Close the connection
-           connection.end(function(){
-               // The connection has been closed
-           });
-       }
-   </script> -->
-    <script src="assets/js/remote.js"></script>
-    <script src="assets/js/easypiechart.js"></script>
-    <script src="assets/js/initeasychart.js"></script>
+   </script>
+   <script src="assets/js/remote.js"></script>
+   <script src="assets/js/easypiechart_jquery.js"></script>
+   <script src="assets/js/easypiechart.js"></script>
+   <script src="assets/js/initeasychart.js"></script>
+   <script src="assets/js/api.js"></script>
+   <script src="assets/js/adafruit.js"></script>
   </body>
 </html>

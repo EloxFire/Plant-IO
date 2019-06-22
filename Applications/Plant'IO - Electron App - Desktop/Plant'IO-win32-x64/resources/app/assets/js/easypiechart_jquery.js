@@ -10,18 +10,18 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set
-    define([], function () {
-      return (root['EasyPieChart'] = factory());
+    define(["jquery"], function (a0) {
+      return (factory(a0));
     });
   } else if (typeof exports === 'object') {
     // Node. Does not work with strict CommonJS, but
     // only CommonJS-like environments that support module.exports,
     // like Node.
-    module.exports = factory();
+    module.exports = factory(require("jquery"));
   } else {
-    root['EasyPieChart'] = factory();
+    factory(jQuery);
   }
-}(this, function () {
+}(this, function ($) {
 
 /**
  * Renderer to render the chart on a canvas object
@@ -349,6 +349,16 @@ var EasyPieChart = function(el, opts) {
 	init();
 };
 
-return EasyPieChart;
+$.fn.easyPieChart = function(options) {
+	return this.each(function() {
+		var instanceOptions;
+
+		if (!$.data(this, 'easyPieChart')) {
+			instanceOptions = $.extend({}, options, $(this).data());
+			$.data(this, 'easyPieChart', new EasyPieChart(this, instanceOptions));
+		}
+	});
+};
+
 
 }));

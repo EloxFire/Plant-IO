@@ -26,6 +26,10 @@ main {
   margin: auto;
   margin-top: 4%;
 }
+
+#api-response {
+  display: none;
+}
 .option {
   margin: 5px;
 }
@@ -92,11 +96,11 @@ header {
 #header {
   display: flex;
   justify-content: center;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 h1 {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 
@@ -121,7 +125,6 @@ h1 {
 .stats {
   display: flex;
   flex-direction: column;
-align-items: flex-end;
 }
 
 .button-more button {
@@ -140,4 +143,25 @@ align-items: flex-end;
 .button-more button:hover {
   background-color: #508024;
   transition: background-color ease 1s;
+}
+
+#chart {
+  position: absolute;
+  text-align: center;
+  left: 8.25%;
+  top: 38.5%;
+}
+
+#chart1 {
+  position: absolute;
+  text-align: center;
+  left: 8%;
+  top: 58%;
+}
+
+#chart2 {
+  position: absolute;
+  text-align: center;
+  left: 8%;
+  top: 78%;
 }
