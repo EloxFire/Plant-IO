@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Plant'IO - Control application</title>
+  </head>
+  <body>
+      <header>
+        <div class="bar-left">
+          <div class="option" id="text_logo"><img src="assets/img/textOnly.png"></div>
+        </div>
+            <div class="bar-right">
+              <div class="option" id="close"><img src="assets/img/bar/close.png" alt=""></div>
+              <div class="option"  id="mini"><img src="assets/img/bar/minimize.png"></div>
+            </div>
+      </header>
+      <main>
+        <div id="header">
+            <img class="logo" src="assets/img/appLogo.png" alt="Logo de Plant'IO">
+            <h1 class="title">Choose your plant</h1>
+        </div>
+        <div class="button-back">
+          <button type="button" onclick="window.location.href='index.html'" name="button">Return to main</button>
+        </div>
+        <div id="affichage-requete">
+          <select class="affichage-requete__plant">
+
+          </select>
+           <input type="button" id="showTxt" value="Choose" />
+        <div id="idPlant">
+
+        </div>
+
+          <div id="nom">
+
+          </div>
+          <div id="cat">
+
+          </div>
+          <div id="description-plante">
+
+          </div>
+          <div id="humi_db">
+
+          </div>
+          <div id="temp_db">
+
+          </div>
+          <div id="lumi_db">
+
+          </div>
+          <div id="floraison">
+
+          </div>
+
+
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+      <script src="assets/js/db_actions.js">
+
+      </script>
+      <script src="assets/js/remote.js"></script>
+  </body>
+</html>

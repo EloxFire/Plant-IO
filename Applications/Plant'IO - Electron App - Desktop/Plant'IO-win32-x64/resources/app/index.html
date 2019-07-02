@@ -15,6 +15,11 @@
             <div class="bar-right">
               <div class="option" id="close"><img src="assets/img/bar/close.png" alt=""></div>
               <div class="option"  id="mini"><img src="assets/img/bar/minimize.png"></div>
+              <div class="option" id="param" ><img class="dropdown" src="assets/img/bar/param.png"></img></div>
+              <div class="dropdown-content">
+                <a href="">Connexion au Wifi</a>
+                <a href="#">Autre parametres</a>
+              </div>
             </div>
       </header>
       <main>
@@ -49,9 +54,16 @@
           </div>
           <div id="main-container-right">
             <div class="button-more">
-              <button type="button" name="button">Choose Plant > </button>
-              <button type="button" name="button">Advanced Stats > </button>
-              <button type="button" name="button">Mode : Regular > </button>
+              <div onclick="window.location.href='database.html'" class="button-inside">
+                <p>Choose Plant</p>  <img src="assets/img/arrow.png" alt="">
+              </div>
+              <div class="button-inside">
+                <p>Adavanced Stats</p>  <img src="assets/img/arrow.png" alt="">
+              </div>
+              <div class="button-inside">
+                <p>Mode : Regular</p>  <img src="assets/img/arrow.png" alt="">
+              </div>
+
             </div>
 
           </div>
@@ -59,84 +71,6 @@
       </main>
       <div id="api-response">
       </div>
-
-
-      <!-- <input type="button" id="action-btn" value="Retrieve 10 first rows in the database" />
-       <table id="table" border="1">
-           <tbody>
-
-           </tbody>
-       </table>
-
-   <script>
-       var mysql = require('mysql');
-
-       function el(selector) {
-           return document.getElementById(selector);
-       }
-
-       el('action-btn').addEventListener('click', function(){
-           // Get the mysql service
-           getFirstTenRows(function(rows){
-               var html = '';
-
-               rows.forEach(function(row){
-                   html += '</td>';
-                   html += '<td>';
-                   html += row.nom;
-                   html += '</td>';
-                   html += '</tr>';
-                   html += row.categorie;
-                   html += '</td>';
-                   html += '</tr>';
-                   console.log(row);
-               });
-
-               document.querySelector('#table > tbody').innerHTML = html;
-           });
-       },false);
-
-       function getFirstTenRows(callback){
-           var mysql = require('mysql');
-
-           // Add the credentials to access your database
-           var connection = mysql.createConnection({
-               host     : 'localhost',
-               user     : 'root',
-               password : null,
-               database : 'plantio_db'
-           });
-
-           // connect to mysql
-           connection.connect(function(err) {
-               // in case of error
-               if(err){
-                   console.log(err.code);
-                   console.log(err.fatal);
-               }
-           });
-
-           // Perform a query
-           $query = 'SELECT `id`,`nom`, `categorie` FROM `infos_plantes` ORDER BY categorie LIMIT 10';
-
-           connection.query($query, function(err, rows, fields) {
-               if(err){
-                   console.log("An error ocurred performing the query.");
-                   console.log(err);
-                   return;
-               }
-
-               callback(rows);
-
-               console.log("Query succesfully executed");
-           });
-
-           // Close the connection
-           connection.end(function(){
-               // The connection has been closed
-           });
-       }
-   </script> -->
    <script src="assets/js/remote.js"></script>
    <script src="assets/js/easypiechart_jquery.js"></script>
    <script src="assets/js/easypiechart.js"></script>

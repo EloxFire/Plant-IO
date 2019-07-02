@@ -38,16 +38,16 @@ sendQueryWithCallback(
                 response = JSON.parse(response);
                 console.log("Refreshed");
                 console.log(response)
-                let SoilH = parseInt(response[6]['last_value'], 10);
-                let AirH = parseInt(response[7]['last_value'], 10);
-                let AirTemp = parseInt(response[8]['last_value'], 10);
+                let SoilH = parseInt(response[3]['last_value'], 10);
+                let AirH = parseInt(response[2]['last_value'], 10);
+                let AirTemp = parseInt(response[1]['last_value'], 10);
 
                 // console.log(SoilH);
                 // console.log(AirH);
                 // console.log(AirTemp);
-                document.getElementById("chart").innerHTML = `${response[6]['last_value']}%`;
-                document.getElementById("chart1").innerHTML = `${response[7]['last_value']}%`;
-                document.getElementById("chart2").innerHTML = `${response[8]['last_value']}°C`;
+                document.getElementById("chart").innerHTML = `${response[3]['last_value']}%`;
+                document.getElementById("chart1").innerHTML = `${response[2]['last_value']}%`;
+                document.getElementById("chart2").innerHTML = `${response[1]['last_value']}°C`;
 
                   $('.chart').data('easyPieChart').update(SoilH);
                   $('.chart1').data('easyPieChart').update(AirH);
@@ -56,7 +56,7 @@ sendQueryWithCallback(
 
 
         });
-        setTimeout(refreshData, 30000);
+        setTimeout(refreshData, 10000);
 
     };
     refreshData();

@@ -1,5 +1,8 @@
 
 const {app, BrowserWindow} = require('electron')
+const connect = require("gulp-connect-php");
+const path = require("path")
+
 
 app.on('ready', () => {
   // create main browser window
@@ -19,8 +22,10 @@ app.on('ready', () => {
   splash = new BrowserWindow({width: 300, height: 450, icon:"assets/img/icon.png", transparent: false, frame: false, alwaysOnTop: true});
   splash.loadFile(`loader.html`);
   setTimeout(function () {
-    mainWindow.loadFile(`index.html`);
+    mainWindow.loadFile("index.html");
   }, 1500);
+
+
 
 
   // if main window is ready to show, then destroy the splash window and show up the main window
