@@ -1,8 +1,5 @@
 
 const {app, BrowserWindow} = require('electron')
-const connect = require("gulp-connect-php");
-const path = require("path")
-
 
 app.on('ready', () => {
   // create main browser window
