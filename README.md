@@ -11,7 +11,7 @@
 
 #### - Plant'IO qu'est ce que c'est ?
 
-  - Plant'IO est le nouveau né de l'entreprise Connected Flowers. C'est un objet connecté permettant à une personne sans connaissance particulière en botanique de faire pousser des plantes chez soi ou en extérieur.
+  - Plant'IO est un objet connecté permettant à une personne sans connaissance particulière en botanique de faire pousser des plantes chez soi ou en extérieur.
 
 
 #### - Les fonctionnalités ?
